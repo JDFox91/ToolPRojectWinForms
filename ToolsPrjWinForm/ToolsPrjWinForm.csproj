@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{570368CF-DA32-490C-A9D4-960B196ACAF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolsPrjWinForm</RootNamespace>
+    <AssemblyName>ToolsPrjWinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.88.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.88.0\lib\net452\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexts\Context.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\History.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Worker.cs" />
+    <Compile Include="Entities\_BaseEntity.cs" />
+    <Compile Include="frmAddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddGroup.Designer.cs">
+      <DependentUpon>frmAddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddWorker.Designer.cs">
+      <DependentUpon>frmAddWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeCondition.Designer.cs">
+      <DependentUpon>frmChangeCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckList.Designer.cs">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetDate.Designer.cs">
+      <DependentUpon>frmGetDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetItem.Designer.cs">
+      <DependentUpon>frmGetItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetWorker.Designer.cs">
+      <DependentUpon>frmGetWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRecord.Designer.cs">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemHistory.Designer.cs">
+      <DependentUpon>frmItemHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemInfo.Designer.cs">
+      <DependentUpon>frmItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemList.Designer.cs">
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkerList.Designer.cs">
+      <DependentUpon>frmWorkerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708311709324_initial.cs" />
+    <Compile Include="Migrations\201708311709324_initial.Designer.cs">
+      <DependentUpon>201708311709324_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708311733403_addHistory.cs" />
+    <Compile Include="Migrations\201708311733403_addHistory.Designer.cs">
+      <DependentUpon>201708311733403_addHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708311740320_itemIdGuid.cs" />
+    <Compile Include="Migrations\201708311740320_itemIdGuid.Designer.cs">
+      <DependentUpon>201708311740320_itemIdGuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709021047474_changeHistoriesWorkerField.cs" />
+    <Compile Include="Migrations\201709021047474_changeHistoriesWorkerField.Designer.cs">
+      <DependentUpon>201709021047474_changeHistoriesWorkerField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddGroup.resx">
+      <DependentUpon>frmAddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddWorker.resx">
+      <DependentUpon>frmAddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeCondition.resx">
+      <DependentUpon>frmChangeCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckList.resx">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetDate.resx">
+      <DependentUpon>frmGetDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetItem.resx">
+      <DependentUpon>frmGetItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetWorker.resx">
+      <DependentUpon>frmGetWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRecord.resx">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemHistory.resx">
+      <DependentUpon>frmItemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemInfo.resx">
+      <DependentUpon>frmItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemList.resx">
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkerList.resx">
+      <DependentUpon>frmWorkerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708311709324_initial.resx">
+      <DependentUpon>201708311709324_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708311733403_addHistory.resx">
+      <DependentUpon>201708311733403_addHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708311740320_itemIdGuid.resx">
+      <DependentUpon>201708311740320_itemIdGuid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709021047474_changeHistoriesWorkerField.resx">
+      <DependentUpon>201709021047474_changeHistoriesWorkerField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170693e6c582239e768a86d74b2356bb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba9eb42abde7ff8fc884b9656ab6a721.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign-512.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
